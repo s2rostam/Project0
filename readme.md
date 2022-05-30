@@ -29,7 +29,7 @@ In order to use the Bank of Mango Web Application on your device please follow t
     ```
 2. Clone this repository to your local machine to where you'd like
     ```
-    > git clone url-here
+    > git clone https://github.com/s2rostam/Project0.git
     ```
 3. Inside the the repository you just cloned, create a virtual environment and then activate it
     ```

@@ -13,7 +13,7 @@ Features include:
 # **Install**
 In order to use the Bank of Mango Web Application on your device please follow the steps below:
 
-## Prerequsites
+### Prerequsites
 - Python 3.9.12 or higher
     - pip
 - Git

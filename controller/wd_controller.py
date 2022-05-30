@@ -5,7 +5,6 @@ from service.transaction_view_service import get_user_account_info
 
 def get_wd_page(input_form):
     if 'user_id' in session:
-        print(input_form)
         if request.method == "POST":
             if validate_button_pressed(input_form):
                 if (input_form.get("accounts") == "chq" and input_form.get("moneytransac") == "withdraw"):
@@ -13,6 +12,8 @@ def get_wd_page(input_form):
                         val = withdraw_money_chequeing(session['user_id'], input_form.get("withdrawmoney"), input_form.get("accounts"))
                         if val is not None:
                             return "Success"
+                        else:
+                            return "Something went wrong"
                     else:
                         return "Not enough money"
                 elif (input_form.get("accounts") == "chq" and input_form.get("moneytransac") == "deposit"):
@@ -20,6 +21,8 @@ def get_wd_page(input_form):
                         val = deposit_money_chequeing(session['user_id'], input_form.get("depositmoney"), input_form.get("accounts"))
                         if val is not None:
                             return "Success"
+                        else:
+                            return "Something went wrong"
                     else:
                         return "Not enough money"
                 elif (input_form.get("accounts") == "sav" and input_form.get("moneytransac") == "withdraw"):
@@ -27,17 +30,21 @@ def get_wd_page(input_form):
                         val = withdraw_money_saving(session['user_id'], input_form.get("withdrawmoney"), input_form.get("accounts"))
                         if val is not None:
                             return "Success"
+                        else:
+                            return "Something went wrong"
                     else:
-                        return "too much money"
+                        return "Too much money"
                 elif (input_form.get("accounts") == "sav" and input_form.get("moneytransac") == "deposit"):
                     if validate_money_amount_deposit_saving(session['user_id'], input_form.get("depositmoney")):
                         val = deposit_money_saving(session['user_id'], input_form.get("depositmoney"), input_form.get("accounts"))
                         if val is not None:
                             return "Success"
+                        else:
+                            return "Something went wrong"
                     else:
-                        return "too much money"
+                        return "Too much money"
                 else:
-                    return "failure"
+                    return "Something went wrong"
             else:
                 return "Fill correct box"
             
@@ -46,6 +53,6 @@ def get_wd_page(input_form):
             if (user_acc is not None):
                 return render_template('actions/wd.html', camount = user_acc.c_amount, samount = user_acc.s_amount)
             else:
-                return "Something went wrong"
+                return "Something went wrong. Account doesn't exist"
     else:
         return "You are not logged in"

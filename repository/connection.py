@@ -6,6 +6,6 @@ def init_db_connection():
         database="postgres",
         #change later?
         user="postgres",
-        password="uhux5nrz"
+        password="NsQS3qWg6Qukn6x"
     )
     return conn

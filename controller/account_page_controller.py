@@ -10,8 +10,6 @@ def get_account_page(input_form):
     soptions = ["Chequeing", "Saving", "Deposit/Withdraw", "Transfer"]
     surl = ['chequeing', 'saving', 'wd', 'transfer-money']
 
-    print(input_form)
-
     if input_form.get('submit') == 'Log out':
         session.pop('user_id', None)
         return redirect(url_for("landing_page"))
@@ -26,7 +24,7 @@ def get_account_page(input_form):
             create_user_account(input_form)
             return redirect(url_for("login"))
         else:
-            return "Invalid input for signup"
+            return "Invalid input for signup. Make sure name, login and password are valid. (no special characters/numbers allowed for names, capitalization required)"
 
     user_login = check_for_login_account(input_form)
     if user_login is not None:
@@ -34,5 +32,5 @@ def get_account_page(input_form):
         user_name_greet = retrieve_user_info(session['user_id'])
         return render_template("start/accountpage.html", user_first_name = user_name_greet.first_name, user_last_name = user_name_greet.last_name, options = soptions, url_options = surl)
     else:
-        return "Login failed"
+        return "Login failed. Account not found"
 

@@ -47,7 +47,7 @@ def delete_user_info_by_id(id):
     cur = conn.cursor()
 
     try:
-        cur.execute(f"DELETE FROM user_info WHERE user_id=({id}) RETURNING user_id;")
+        cur.execute(f"DELETE FROM user_info WHERE user_id={id} RETURNING user_id;")
         id = cur.fetchone()[0]
         conn.commit()
         return id

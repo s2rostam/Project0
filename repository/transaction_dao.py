@@ -32,8 +32,6 @@ def get_transaction_log(id, acc):
     if acc == "saving":
         acc = 'sav'
 
-    print(acc)
-
     read_q = f"SELECT * FROM user_transaction_info WHERE user_id={id} AND transaction_location='{acc}';"
 
     try:
@@ -44,7 +42,6 @@ def get_transaction_log(id, acc):
             all_transac = list()
             for t in transactions_list:
                 all_transac.append(Transaction(t[0], t[1], t[2], t[3], t[4], t[5]))
-            print(all_transac)
             return all_transac
         return "Nothing here yet..."
     except(psycopg2.DatabaseError) as err:

@@ -1,9 +1,6 @@
-from cmath import log
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import secrets
 import logging
-from logging.handlers import RotatingFileHandler
-from time import strftime
 
 from controller.account_page_controller import get_account_page
 from controller.chequeing_controller import get_chequeing_page
@@ -60,4 +57,4 @@ if __name__ == '__main__':
     logger = logging.getLogger('werkzeug')
     handler = logging.FileHandler('requests.log')
     logger.addHandler(handler)
-    app.run(debug=True)
+    app.run()

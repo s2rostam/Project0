@@ -8,9 +8,11 @@ from repository.user_info_dao import delete_user_info_by_id
 def remove_user_records(id):
     if check_user_account_info(id) is not None:
         delete_transaction_logs(id)
-        delete_user_info_by_id(id)
-        delete_user_account_info(id)
-        delete_user_login_by_id(id)
+        user_info_id = delete_user_info_by_id(id)
+        if user_info_id is not None:
+            user_accunt_info_id = delete_user_account_info(id)
+            if user_accunt_info_id is not None:
+                delete_user_login_by_id(id)
 
 def check_user_account_info(id):
     acc_info = get_user_login_by_id(id)

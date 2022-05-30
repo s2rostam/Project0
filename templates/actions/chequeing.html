@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chequeing</title>
+        <style>
+            .transactions {
+                display: flex;
+                padding-bottom: 20px;
+            }
+            .transactions > div {
+                flex: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Chequeing</h2>
+        <p>${{ cheq_num }}</p>
+
+        <h3>Transactions</h3>
+        {% if list_of_transactions is string %}
+            <p>{{ list_of_transactions }}</p>
+        {% else %}
+            <div class="transactions">
+                <div><h3>name</h3></div>
+                <div><h3>amount</h3></div>
+            </div> 
+            {% for transac in list_of_transactions %}
+            <div class="transactions">
+                <div>{{ transac.transaction_name }}</div>
+                <div>${{ transac.transaction_amount }}</div>
+            </div>
+            {% endfor %}
+        {% endif %}
+    </body>
+</html>

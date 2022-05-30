@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transfer</title>
+    </head>
+    <body>
+        <div>
+            <h3>Send money to other users</h3>
+            <form action="http://127.0.0.1:5000/account/transfer-money" method="post">
+                <p>Who do you want to send to?</p>
+                <p>We will only take money from your chequeing account</p>
+                
+                <label for="unamesend">username</label>
+                <input type="text" name="sendunamemoney" placeholder="username" required>
+
+                <label for="sendamountmoney">amount</label>
+                <input type="number" name="sendamountmoney" placeholder="1" min="1" required>
+
+                <p>
+                    <input type="submit" name="send" value="send">
+                </p>
+            </form>
+        </div>
+    </body>
+</html>

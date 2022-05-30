@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Account</title>
+    </head>
+    <body>
+        <h2>Welcome {{ user_first_name }} {{ user_last_name }}</h2>
+        {% for option in options %}
+        <form action="http://127.0.0.1:5000/account/{{ url_options[loop.index0] }}" method="get">
+            <p>
+                <input type="submit" name="submit" value="{{ option }}">
+            </p>
+        </form>
+        {% endfor %}
+        <form action="http://127.0.0.1:5000/account" method="post">
+            <p>
+                <input type="submit" name="submit" value="Log out">
+            </p>
+            <br style="padding:0 7% 0 7%">
+
+            <p>This will remove your account. <b>Warning: Once you press this button you cannot go back</b></p>
+            <p>
+                <input type="submit" name="submit" value="Remove account">
+            </p>         
+        </form>
+    </body>
+</html>
+

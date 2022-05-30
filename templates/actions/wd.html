@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Withdraw/Deposit</title>
+    </head>
+    <body>
+        <div class="information">
+            <h4>Chequeing</h4>
+            <p>${{ camount }} </p>
+            <br>
+            <h4>Saving</h4>
+            <p>${{ samount }} </p>
+        </div>
+        <br>
+        <div class="actions">
+            <form action="http://127.0.0.1:5000/account/wd" method="POST">
+                <p>
+                    <select name="accounts" id="accounts">
+                        <option value="chq">Chequeing</option>
+                        <option value="sav">Saving</option>
+                    </select>
+                </p>
+                <br>
+                <div class="withdraw">
+                    <label for="withdrawmoney">Withdraw</label>
+                    <input type="number" name="withdrawmoney" min="1">
+                    <input type="submit" value="withdraw" name="moneytransac">
+                </div>
+                <div class="deposit">
+                    <label for="depositmoney">Deposit</label>
+                    <input type="number" name="depositmoney" min="1" max="1000000">
+                    <input type="submit" value="deposit" name="moneytransac">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

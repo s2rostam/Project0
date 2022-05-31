@@ -13,6 +13,8 @@ def send_money_chequeing(id, other_id, money, sent_user):
             t_id = do_transaction(id, 'chequeing', -Decimal(money), f"Sent money to {sent_user}", "credit", "chq")
             if t_id is not None:
                 return True
+        else:
+            return False
     return False
 
 def recieve_money_chequeing(id, money, rec_user):

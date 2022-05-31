@@ -40,6 +40,9 @@ def validate_money_amount_deposit_saving(id, money):
         return deposit_check(money, account.s_amount)
 
 def deposit_check(money: str, curr_amount: Decimal):
+    conver_money = Decimal(money)
+    if (conver_money < Decimal(0.00)):
+        return False
     total = Decimal(money) + curr_amount
     if total < 9999999:
         return True
@@ -57,6 +60,9 @@ def validate_money_amount_withdraw_saving(id, money):
         return withdraw_check(money, account.s_amount)
 
 def withdraw_check(money: str, curr_amount: Decimal):
+    conver_money = Decimal(money)
+    if (conver_money < Decimal(0.00)):
+        return False
     total = -Decimal(money) + curr_amount
     if total >= 0:
         return True

@@ -18,11 +18,15 @@ def init_user_info(id, first_name, last_name):
     else:
         return False
 
-def create_user_account(input_form):
-    created_user_login_id = create_user_login(input_form.get('uname'), input_form.get('upass'))
+def validate_all_sections_filled(input_form):
+    return ((not input_form.get("uname") == '') and (not input_form.get("upass") == '') and (not input_form.get("fname") == '') and (not input_form.get("lname") == ''))
 
-    if created_user_login_id is not None:
-        if init_user_account_info(created_user_login_id) and init_user_info(created_user_login_id, input_form.get('fname'), input_form.get('lname')):
-            return created_user_login_id
+def create_user_account(input_form):
+    if validate_all_sections_filled(input_form):
+        created_user_login_id = create_user_login(input_form.get('uname'), input_form.get('upass'))
+
+        if created_user_login_id is not None:
+            if init_user_account_info(created_user_login_id) and init_user_info(created_user_login_id, input_form.get('fname'), input_form.get('lname')):
+                return created_user_login_id
 
 

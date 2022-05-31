@@ -1,0 +1,1957 @@
+{
+	"info": {
+		"_postman_id": "9e2b486e-c24e-4ff4-b0b4-615b1f847d56",
+		"name": "Project_0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19252481"
+	},
+	"item": [
+		{
+			"name": "Sign up page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fname",
+							"value": "John",
+							"type": "text"
+						},
+						{
+							"key": "lname",
+							"value": "Smith",
+							"type": "text"
+						},
+						{
+							"key": "uname",
+							"value": "John123",
+							"type": "text"
+						},
+						{
+							"key": "upass",
+							"value": "Password123",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "sign up",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Only first name and last name",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "uname",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "upass",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "sign up",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 16:59:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Invalid input for signup. Make sure name, login and password are valid. (no special characters/numbers allowed for names, capitalization required)"
+				},
+				{
+					"name": "Only username and password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "uname",
+									"value": "John123",
+									"type": "text"
+								},
+								{
+									"key": "upass",
+									"value": "Password123",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "sign up",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:00:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "146"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Invalid input for signup. Make sure name, login and password are valid. (no special characters/numbers allowed for names, capitalization required)"
+				},
+				{
+					"name": "Valid Input",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fname",
+									"value": "John",
+									"type": "text"
+								},
+								{
+									"key": "lname",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "uname",
+									"value": "John123",
+									"type": "text"
+								},
+								{
+									"key": "upass",
+									"value": "Password123",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "sign up",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:01:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "903"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Login</title>\n    </head>\n    <body>\n        <h1>Login</h1>\n        <form action=\"http://127.0.0.1:5000/account\" method=\"post\">\n            <p>\n                <label for=\"uname\">Username</label>\n                <input type=\"text\" name =\"uname\" placeholder=\"username\" required>\n            \n            </p>\n            <p>\n                <label for=\"upass\">Password</label>\n                <input type=\"password\" name = \"upass\" placeholder=\"password\" required>\n            \n            </p>\n            <p>\n                <input type=\"hidden\" name=\"page\" value=\"login\">\n            \n            </p>\n            <p>\n                <input type=\"submit\" value=\"login\" name=\"sumbit\">\n            \n            </p>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Sign In page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uname",
+							"value": "John123",
+							"type": "text"
+						},
+						{
+							"key": "upass",
+							"value": "Password123",
+							"type": "text"
+						},
+						{
+							"key": "page",
+							"value": "login",
+							"type": "text"
+						},
+						{
+							"key": "submit",
+							"value": "login",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Invalid login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uname",
+									"value": "John1234",
+									"type": "text"
+								},
+								{
+									"key": "upass",
+									"value": "Password123",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "login",
+									"type": "text"
+								},
+								{
+									"key": "submit",
+									"value": "login",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:04:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Login failed. Account not found"
+				},
+				{
+					"name": "Valid Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uname",
+									"value": "John123",
+									"type": "text"
+								},
+								{
+									"key": "upass",
+									"value": "Password123",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "login",
+									"type": "text"
+								},
+								{
+									"key": "submit",
+									"value": "login",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:05:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1601"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "session=eyJ1c2VyX2lkIjoxMH0.YpZKzQ.brmYCUROoXW0r4RXjVorns-r7Wc; HttpOnly; Path=/"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Account</title>\n    </head>\n    <body>\n        <h2>Welcome John Smith</h2>\n        <form action=\"http://127.0.0.1:5000/account/chequeing\" method=\"get\">\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Chequeing\">\n            \n            </p>\n        </form>\n        <form action=\"http://127.0.0.1:5000/account/saving\" method=\"get\">\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Saving\">\n            \n            </p>\n        </form>\n        <form action=\"http://127.0.0.1:5000/account/wd\" method=\"get\">\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Deposit/Withdraw\">\n            \n            </p>\n        </form>\n        <form action=\"http://127.0.0.1:5000/account/transfer-money\" method=\"get\">\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Transfer\">\n            \n            </p>\n        </form>\n        <form action=\"http://127.0.0.1:5000/account\" method=\"post\">\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Log out\">\n            \n            </p>\n            <br style=\"padding:0 7% 0 7%\">\n            <p>This will remove your account. \n                <b>Warning: Once you press this button you cannot go back</b>\n            </p>\n            <p>\n                <input type=\"submit\" name=\"submit\" value=\"Remove account\">\n            \n            </p>\n        </form>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Chequeing Page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "submit",
+						"value": "Chequeing",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/account/chequeing?submit=Chequeing",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"chequeing"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "Chequeing"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Chequeing Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "submit",
+								"value": "Chequeing",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/chequeing?submit=Chequeing",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"chequeing"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Chequeing"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:08:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "618"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Chequeing</title>\n        <style>\n            .transactions {\n                display: flex;\n                padding-bottom: 20px;\n            }\n            .transactions > div {\n                flex: 1;\n            }\n        </style>\n    </head>\n    <body>\n        <h2>Chequeing</h2>\n        <p>$0.00</p>\n        <h3>Transactions</h3>\n        <p>Nothing here yet...</p>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Saving Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/account/saving?submit=Saving",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"saving"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "Saving"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Saving Page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/saving?submit=Saving",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"saving"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Saving"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:09:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "612"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Saving</title>\n        <style>\n            .transactions {\n                display: flex;\n                padding-bottom: 20px;\n            }\n            .transactions > div {\n                flex: 1;\n            }\n        </style>\n    </head>\n    <body>\n        <h2>Saving</h2>\n        <p>$0.00</p>\n        <h3>Transactions</h3>\n        <p>Nothing here yet...</p>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Deposit/Withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "accounts",
+							"value": "Chequeing",
+							"type": "text"
+						},
+						{
+							"key": "withdrawmoney",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "depositmoney",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "moneytransac",
+							"value": "withdraw",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account/wd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"wd"
+					],
+					"query": [
+						{
+							"key": "accounts",
+							"value": "Chequeing",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Deposit/Withdraw GET page",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd?submit=Deposit%2FWithdraw",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Deposit%2FWithdraw"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:11:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1437"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Withdraw/Deposit</title>\n    </head>\n    <body>\n        <div class=\"information\">\n            <h4>Chequeing</h4>\n            <p>$0.00 </p>\n            <br>\n            <h4>Saving</h4>\n            <p>$0.00 </p>\n        </div>\n        <br>\n        <div class=\"actions\">\n            <form action=\"http://127.0.0.1:5000/account/wd\" method=\"POST\">\n                <p>\n                    <select name=\"accounts\" id=\"accounts\">\n                        <option value=\"chq\">Chequeing</option>\n                        <option value=\"sav\">Saving</option>\n                    </select>\n                </p>\n                <br>\n                <div class=\"withdraw\">\n                    <label for=\"withdrawmoney\">Withdraw</label>\n                    <input type=\"number\" name=\"withdrawmoney\" min=\"1\">\n                    <input type=\"submit\" value=\"withdraw\" name=\"moneytransac\">\n                \n                </div>\n                <div class=\"deposit\">\n                    <label for=\"depositmoney\">Deposit</label>\n                    <input type=\"number\" name=\"depositmoney\" min=\"1\" max=\"1000000\">\n                    <input type=\"submit\" value=\"deposit\" name=\"moneytransac\">\n                \n                </div>\n            </form>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "Deposit/Withdraw no boxes filled",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "chq",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "withdraw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:14:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Fill correct box"
+				},
+				{
+					"name": "Deposit/Withdraw wrong box filled",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "chq",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "withdraw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:14:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Fill correct box"
+				},
+				{
+					"name": "Deposit money chequeing",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "chq",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "deposit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:18:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Success"
+				},
+				{
+					"name": "Withdraw too much from chequeing",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "chq",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "101",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "withdraw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:19:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Not enough money"
+				},
+				{
+					"name": "Withdraw money from saving but no money",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "sav",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "101",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "withdraw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:20:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Too much money"
+				},
+				{
+					"name": "Withdraw enough money",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "chq",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "withdraw",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:21:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Success"
+				},
+				{
+					"name": "Deposit money to saving",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "accounts",
+									"value": "sav",
+									"type": "text"
+								},
+								{
+									"key": "withdrawmoney",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "depositmoney",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "moneytransac",
+									"value": "deposit",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:22:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Success"
+				},
+				{
+					"name": "Deposit/Withdraw GET page after transactions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/wd?submit=Deposit%2FWithdraw",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"wd"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Deposit%2FWithdraw"
+								},
+								{
+									"key": "accounts",
+									"value": "Chequeing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:23:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1439"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Withdraw/Deposit</title>\n    </head>\n    <body>\n        <div class=\"information\">\n            <h4>Chequeing</h4>\n            <p>$50.00 </p>\n            <br>\n            <h4>Saving</h4>\n            <p>$10.00 </p>\n        </div>\n        <br>\n        <div class=\"actions\">\n            <form action=\"http://127.0.0.1:5000/account/wd\" method=\"POST\">\n                <p>\n                    <select name=\"accounts\" id=\"accounts\">\n                        <option value=\"chq\">Chequeing</option>\n                        <option value=\"sav\">Saving</option>\n                    </select>\n                </p>\n                <br>\n                <div class=\"withdraw\">\n                    <label for=\"withdrawmoney\">Withdraw</label>\n                    <input type=\"number\" name=\"withdrawmoney\" min=\"1\">\n                    <input type=\"submit\" value=\"withdraw\" name=\"moneytransac\">\n                \n                </div>\n                <div class=\"deposit\">\n                    <label for=\"depositmoney\">Deposit</label>\n                    <input type=\"number\" name=\"depositmoney\" min=\"1\" max=\"1000000\">\n                    <input type=\"submit\" value=\"deposit\" name=\"moneytransac\">\n                \n                </div>\n            </form>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Transfer page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sendunamemoney",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "sendamountmoney",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account/transfer-money?submit=Transfer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account",
+						"transfer-money"
+					],
+					"query": [
+						{
+							"key": "submit",
+							"value": "Transfer"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Transfer page GET",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/transfer-money?submit=Transfer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"transfer-money"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Transfer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:24:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Transfer</title>\n    </head>\n    <body>\n        <div>\n            <h3>Send money to other users</h3>\n            <form action=\"http://127.0.0.1:5000/account/transfer-money\" method=\"post\">\n                <p>Who do you want to send to?</p>\n                <p>We will only take money from your chequeing account</p>\n                <label for=\"unamesend\">username</label>\n                <input type=\"text\" name=\"sendunamemoney\" placeholder=\"username\" required>\n                <label for=\"sendamountmoney\">amount</label>\n                <input type=\"number\" name=\"sendamountmoney\" placeholder=\"1\" min=\"1\" required>\n                <p>\n                    <input type=\"submit\" name=\"send\" value=\"send\">\n                \n                </p>\n            </form>\n        </div>\n    </body>\n</html>"
+				},
+				{
+					"name": "User doesn't exist",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sendunamemoney",
+									"value": "fsfdsf",
+									"type": "text"
+								},
+								{
+									"key": "sendamountmoney",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/transfer-money?submit=Transfer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"transfer-money"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Transfer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:26:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "User to send to doesn't exist"
+				},
+				{
+					"name": "User input too much money",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sendunamemoney",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "sendamountmoney",
+									"value": "19299",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/transfer-money?submit=Transfer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"transfer-money"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Transfer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:54:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Something went wrong. Make sure you have enough money"
+				},
+				{
+					"name": "User Sent money successfully",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sendunamemoney",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "sendamountmoney",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account/transfer-money?submit=Transfer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account",
+								"transfer-money"
+							],
+							"query": [
+								{
+									"key": "submit",
+									"value": "Transfer"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:55:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "Vary",
+							"value": "Cookie"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "Success"
+				}
+			]
+		},
+		{
+			"name": "Account sign out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "submit",
+							"value": "Log out",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign out successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "submit",
+									"value": "Log out",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 17:58:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "551"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Welcome</title>\n        <style>\n        a {\n            text-decoration: none;\n            color: black;\n        }\n    </style>\n    </head>\n    <body>\n        <h1>Welcome to Bank of Mango</h1>\n        <a href=\"http://127.0.0.1:5000/login\">\n            <button>Log in</button>\n        </a>\n        <a href=\"http://127.0.0.1:5000/signup\">\n            <button>Sign Up</button>\n        </a>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "Remove account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "submit",
+							"value": "Remove account",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Remove account success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "submit",
+									"value": "Remove account",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/account",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.9.12"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 31 May 2022 18:00:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "551"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <title>Welcome</title>\n        <style>\n        a {\n            text-decoration: none;\n            color: black;\n        }\n    </style>\n    </head>\n    <body>\n        <h1>Welcome to Bank of Mango</h1>\n        <a href=\"http://127.0.0.1:5000/login\">\n            <button>Log in</button>\n        </a>\n        <a href=\"http://127.0.0.1:5000/signup\">\n            <button>Sign Up</button>\n        </a>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}

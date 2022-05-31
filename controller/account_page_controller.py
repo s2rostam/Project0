@@ -21,8 +21,11 @@ def get_account_page(input_form):
 
     elif input_form.get('page') == 'sign up':
         if validate_login_info(input_form.get("uname"), input_form.get("upass")) and validate_user_info(input_form.get("fname"), input_form.get("lname")):
-            create_user_account(input_form)
-            return redirect(url_for("login"))
+            create_status = create_user_account(input_form)
+            if create_status is not None:
+                return redirect(url_for("login"))
+            else:
+                return "All fields must be filled"
         else:
             return "Invalid input for signup. Make sure name, login and password are valid. (no special characters/numbers allowed for names, capitalization required)"
 

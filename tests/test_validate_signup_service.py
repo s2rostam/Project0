@@ -1,4 +1,5 @@
 import pytest
+from service.signup_service import validate_all_sections_filled
 
 from service.validate_signup_service import validate_length_first_name, validate_length_last_name, validate_length_password, validate_length_username, validate_pattern_first_name, validate_pattern_last_name, validate_pattern_password, validate_pattern_username
 
@@ -66,3 +67,13 @@ def test_validate_length_first_name(test_input, expected):
 )
 def test_validate_length_last_name(test_input, expected):
     assert validate_length_last_name(test_input) == expected
+
+@pytest.mark.parametrize("test_input, expected", [
+({'fname': 'John', 'lname':'Smith', 'uname':'Test', 'upass': '123'}, True), ({'fname': 'John', 'lname':'', 'uname':'Test', 'upass': '123'}, False), 
+({'fname': 'John', 'lname':'Smith', 'uname':'', 'upass': '123'}, False), ({'fname': 'John', 'lname':'Smith', 'uname':'Test', 'upass': ''}, False),
+({'fname': '', 'lname':'Smith', 'uname':'Test', 'upass': '123'}, False), ({'fname': '', 'lname':'', 'uname':'Test', 'upass': '123'}, False),
+({'fname': 'John', 'lname':'Smith', 'uname':'', 'upass': ''}, False), ({'fname': '', 'lname':'Smith', 'uname':'', 'upass': '123'}, False),
+({'fname': 'John', 'lname':'', 'uname':'Test', 'upass': ''}, False)]
+)
+def test_validate_all_sections_filled(test_input, expected):
+    assert validate_all_sections_filled(test_input) == expected

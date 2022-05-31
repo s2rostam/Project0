@@ -10,6 +10,19 @@ Features include:
 - Transfer funds to another account with the Bank of Mango
 - Removing your account 
 
+# **Technologies**
+
+This app is hosted by the Flask Web Framework (2.1.2) and uses the following technology:
+- Python 3.9.12 - For server backend
+- psycopg2 - For accessing database from flask server
+- HTML - For templates
+- Jinja - For rendering templates
+- AWS RDS (PostgreSQL10) - For storing and accessing data 
+- pytest - For unit testing
+- Postman - For server testing
+- DBeaver - For viewing and creating tables
+- Git - For version control
+
 # **Install**
 In order to use the Bank of Mango Web Application on your device please follow the steps below:
 
@@ -56,27 +69,3 @@ In order to use the Bank of Mango Web Application on your device please follow t
 # **User Stories**
 
 [Link to user stories here.](https://trello.com/b/JofIOTMt/sarah-projects)
-
-# License
-
-MIT License
-
-Copyright (c) [2022] [Sarah Rostami]
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

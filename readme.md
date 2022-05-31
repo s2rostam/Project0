@@ -57,3 +57,6 @@ In order to use the Bank of Mango Web Application on your device please follow t
 
 [Link to user stories here.](https://trello.com/b/JofIOTMt/sarah-projects)
 
+# License
+
+[License](https://creativecommons.org/licenses/by-nc/4.0/)
